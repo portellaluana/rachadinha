@@ -288,8 +288,8 @@ button {
 .features-item figure {
   background-repeat: no-repeat;
   background-size: cover;
-  width: 45%;
-  height: 45%;
+  width: 120px;
+  height: 120px;
 }
 
 .features-item-1 figure {
