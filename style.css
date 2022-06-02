@@ -70,7 +70,7 @@ button {
   font-size: 1.2rem;
   color: var(--primary-color);
   background-color: transparent;
-  border: none;
+  border: 1px solid var(--primary-color);
   width: 120px;
   height: 42px;
   margin-top: 24px;
@@ -80,9 +80,9 @@ button {
 .secondary-button:hover {
   text-decoration: none;
   font-size: 1.2rem;
-  color: var(--primary-color);
-  background-color: transparent;
-  border: 1px solid var(--primary-color);
+  color: white;
+  background-color: var(--yellow-brand);
+  border: none;
   width: 120px;
   height: 42px;
   margin-top: 24px;
