@@ -11,6 +11,10 @@
   font-size: 62.5%; /* 1rem = 10px */
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   scroll-behavior: smooth;
   font-family: "Montserrat", sans-serif;
@@ -23,8 +27,9 @@ button {
   text-decoration: none;
   font-weight: 900;
   color: white;
+  border: transparent;
   border-radius: 100px;
-  padding: auto;
+  padding: 12px;
   transition: 0.3 ease;
   transition-property: background-color, color;
   cursor: pointer;
@@ -42,7 +47,7 @@ button {
 #presentation .cta:hover {
   font-size: 1.8rem;
   background-color: var(--button-color-hover);
-  border: none;
+  border: transparent;
   width: 160px;
   height: 48px;
   margin-top: 24px;
@@ -51,7 +56,7 @@ button {
 .primary-button {
   font-size: 1.2rem;
   background-color: var(--primary-color);
-  border: 1px solid white;
+  border: transparent;
   width: 120px;
   height: 42px;
   margin-top: 24px;
@@ -67,6 +72,7 @@ button {
 }
 
 .secondary-button {
+  text-decoration: none;
   font-size: 1.2rem;
   color: var(--primary-color);
   background-color: transparent;
@@ -82,7 +88,7 @@ button {
   font-size: 1.2rem;
   color: white;
   background-color: var(--yellow-brand);
-  border: none;
+  border: 1px solid transparent;
   width: 120px;
   height: 42px;
   margin-top: 24px;
@@ -158,7 +164,9 @@ button {
 }
 
 .features-title img {
-  margin-right: 32px;
+  float: left;
+  margin-left: 12%;
+  width: 175%;
 }
 
 .features-title h1 {
@@ -171,7 +179,7 @@ button {
   font-size: 2rem;
   font-weight: 500;
   color: var(--gray-dark);
-  width: 360px;
+  width: 340px;
   margin-top: 16px;
 }
 
@@ -212,18 +220,36 @@ button {
   text-align: center;
 }
 
+.features-highlights-itens .primary-button {
+  font-size: 1.2rem;
+  background-color: var(--primary-color);
+  border: 1px solid white;
+  width: 120px;
+  height: 42px;
+  margin-top: 24px;
+}
+
+.features-highlights-itens .primary-button:hover {
+  font-size: 1.2rem;
+  background-color: var(--yellow-brand);
+  border: 1px solid transparent;
+  width: 120px;
+  height: 42px;
+  margin-top: 24px;
+}
+
 .features-item {
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 80%;
+  width: 33%;
   margin: 20px auto;
   border-radius: 16px;
   border: none;
   background-color: transparent;
-  padding: 48px;
+  padding: 40px;
   color: var(--gray-dark);
-  height: 360px;
+  height: 400px;
   justify-content: center;
 }
 
@@ -231,14 +257,15 @@ button {
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 80%;
+  width: 33%;
   margin: 20px auto;
   border-radius: 16px;
   border: none;
   background-color: var(--primary-color);
+  padding: 40px;
   border-radius: 16px;
   color: white;
-  height: 360px;
+  height: 400px;
 }
 
 .features-item h2 {
@@ -246,43 +273,47 @@ button {
   font-weight: 900;
   margin-top: 24px;
   margin-bottom: 8px;
+  padding: auto;
 }
 
 .features-item figure img {
-  opacity: 0;
-  width: 120px;
+  float: left;
+  visibility: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 120px;
+  z-index: -1;
 }
 
 .features-item figure {
   background-repeat: no-repeat;
   background-size: cover;
-  width: 120px;
-  height: 120px;
+  width: 45%;
+  height: 45%;
 }
 
 .features-item-1 figure {
-  background-image: url(./assets/monte-gabinetes-green.png);
+  background-image: url(./assets/monte-gabinetes-green.svg);
 }
 
 .features-item-2 figure {
-  background-image: url(./assets/adicione-laranjas-green.png);
+  background-image: url(./assets/adicione-laranjas-green.svg);
 }
 
 .features-item-3 figure {
-  background-image: url(./assets/recolha-pagamentos-green.png);
+  background-image: url(./assets/recolha-pagamentos-green.svg);
 }
 
 .features-item-1:hover figure {
-  background-image: url(./assets/monte-gabinetes-yellow.png);
+  background-image: url(./assets/monte-gabinetes-yellow.svg);
 }
 
 .features-item-2:hover figure {
-  background-image: url(./assets/adicione-laranjas-yellow.png);
+  background-image: url(./assets/adicione-laranjas-yellow.svg);
 }
 
 .features-item-3:hover figure {
-  background-image: url(./assets/recolha-pagamentos-yellow.png);
+  background-image: url(./assets/recolha-pagamentos-yellow.svg);
 }
 
 /*new currency*/
@@ -359,6 +390,28 @@ button {
     width: 100%;
   }
 }
+
+/* 
+@media screen {
+ 
+  
+phones, 600px
+@media only screen and (max-width: 600px) {
+  .example {background: red;}
+}
+
+tablets and large phones, 600px
+@media only screen and (min-width: 600px) {
+  .example {background: green;}
+}
+
+desktops, 992px 
+@media only screen and (min-width: 992px) {
+  .example {background: orange;}
+  
+}
+
+*/
 
 /*
 .container p span.typed-text {
