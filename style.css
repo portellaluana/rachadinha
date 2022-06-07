@@ -1,10 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap");
 
 :root {
-  --primary-color: #3c8533;
-  --primary-color-dark: #183614;
-  --button-color-hover: #2f6a28;
+  --green-brand: #3c8533;
+  --green-brand-dark: #2f6a28;
+  --green-brand-dark-super: #183614;
+
   --yellow-brand: #ffa300;
+  --yellow-brand-dark: #f18000;
+
   --gray-dark: #333333;
   --gray-off: #a3a3a3;
 
@@ -17,7 +20,7 @@
 
 body {
   scroll-behavior: smooth;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
   font-size: 1.6rem;
 }
 
@@ -27,7 +30,7 @@ button {
   text-decoration: none;
   font-weight: 900;
   color: white;
-  border: transparent;
+  border: none;
   border-radius: 100px;
   padding: 12px;
   transition: 0.3 ease;
@@ -37,8 +40,7 @@ button {
 
 #presentation .cta {
   font-size: 1.8rem;
-  background-color: var(--primary-color);
-  border: none;
+  background-color: var(--green-brand);
   width: 160px;
   height: 48px;
   margin-top: 24px;
@@ -46,8 +48,8 @@ button {
 
 #presentation .cta:hover {
   font-size: 1.8rem;
-  background-color: var(--button-color-hover);
-  border: transparent;
+  background-color: var(--green-brand-dark);
+  border: none;
   width: 160px;
   height: 48px;
   margin-top: 24px;
@@ -55,8 +57,8 @@ button {
 
 .primary-button {
   font-size: 1.2rem;
-  background-color: var(--primary-color);
-  border: transparent;
+  background-color: var(--green-brand);
+  border: none;
   width: 120px;
   height: 42px;
   margin-top: 24px;
@@ -65,7 +67,7 @@ button {
 .primary-button:hover {
   font-size: 1.2rem;
   background-color: var(--yellow-brand);
-  border: transparent;
+  border: none;
   width: 120px;
   height: 42px;
   margin-top: 24px;
@@ -74,9 +76,9 @@ button {
 .secondary-button {
   text-decoration: none;
   font-size: 1.2rem;
-  color: var(--primary-color);
+  color: var(--green-brand);
   background-color: transparent;
-  border: 1px solid var(--primary-color);
+  border: 1px solid var(--green-brand);
   width: 120px;
   height: 42px;
   margin-top: 24px;
@@ -95,6 +97,8 @@ button {
   margin-left: 16px;
 }
 
+/*_______________________INDEX_______________________*/
+
 #presentation {
   background-image: url(./assets/backgound-image-.jpg);
   min-height: 100vh;
@@ -106,6 +110,18 @@ button {
   justify-content: center;
   display: flex;
   z-index: 1;
+}
+
+#presentation::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(----green-brand-dark-super);
+  opacity: 0.4;
+  z-index: -1;
 }
 
 #presentation img {
@@ -121,41 +137,15 @@ button {
   width: fit-content;
 }
 
-#presentation::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background-color: var(--primary-color-dark);
-  opacity: 0.4;
-  z-index: -1;
-}
-
 #presentation h1.text {
   animation: typing 1s steps(80) 1s normal;
   overflow: hidden;
   color: var(--yellow-brand);
 }
 
-/*_______________________HOME_______________________*/
+/*_______________________INNER_______________________*/
 
-/*header*/
-.features-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 16px;
-  margin-left: 32px;
-  margin-right: 32px;
-}
-
-.features-header img {
-  width: 180px;
-}
-
-/*highlight*/
+/*title inner*/
 .features-title {
   min-height: 100vh;
   align-items: center;
@@ -183,10 +173,6 @@ button {
   margin-top: 16px;
 }
 
-.features-title p span {
-  font-size: 1.4rem;
-}
-
 /*features*/
 .features-presentation {
   min-height: 100vh;
@@ -206,7 +192,6 @@ button {
   font-size: 1.6rem;
   font-weight: 500;
   color: var(--gray-dark);
-  text-transform: uppercase;
 }
 
 .features-highlights-itens {
@@ -222,20 +207,20 @@ button {
 
 .features-highlights-itens .primary-button {
   font-size: 1.2rem;
-  background-color: var(--primary-color);
-  border: 1px solid white;
+  background-color: var(--green-brand);
   width: 120px;
   height: 42px;
   margin-top: 24px;
+  border: none;
 }
 
 .features-highlights-itens .primary-button:hover {
   font-size: 1.2rem;
   background-color: var(--yellow-brand);
-  border: 1px solid transparent;
   width: 120px;
   height: 42px;
   margin-top: 24px;
+  border: none;
 }
 
 .features-item {
@@ -261,11 +246,21 @@ button {
   margin: 20px auto;
   border-radius: 16px;
   border: none;
-  background-color: var(--primary-color);
+  background-color: var(--green-brand);
   padding: 40px;
   border-radius: 16px;
   color: white;
   height: 400px;
+}
+
+.features-item:hover button {
+  background-color: transparent;
+  border: 1px solid white;
+}
+
+.features-item:hover button:hover {
+  background-color: var(--yellow-brand);
+  border: none;
 }
 
 .features-item h2 {
@@ -319,7 +314,7 @@ button {
 /*new currency*/
 .new-currency {
   background-image: url(./assets/backgound-image-.jpg);
-  min-height: 60vh;
+  min-height: 80vh;
   background-size: cover;
   background-position: top center;
   position: relative;
@@ -337,7 +332,7 @@ button {
   top: 0;
   height: 100%;
   width: 100%;
-  background-color: var(--primary-color-dark);
+  background-color: var(----green-brand-dark-super);
   opacity: 0.4;
   z-index: -1;
 }
@@ -365,21 +360,21 @@ button {
 
 .create-new-currency .white-button {
   font-size: 1.2rem;
-  background-color: var(--primary-color);
-  border: none;
+  background-color: var(--green-brand);
   width: 120px;
   height: 42px;
   margin-top: 24px;
   color: white;
+  border: none;
 }
 
 .create-new-currency .white-button:hover {
   font-size: 1.2rem;
   background-color: var(--yellow-brand);
-  border: transparent;
   width: 120px;
   height: 42px;
   margin-top: 24px;
+  border: none;
 }
 
 @keyframes typing {
@@ -391,6 +386,168 @@ button {
   }
 }
 
+/*_______________________FORMS_______________________*/
+
+.form-itens {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.form-header {
+  text-align: right;
+}
+
+.form-header img {
+  width: 400px;
+  margin-right: 32px;
+  border-radius: 4px;
+}
+
+.form-inputs {
+  width: 400px;
+  margin-left: 32px;
+  text-align: center;
+}
+
+.form-inputs h2 {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 8px;
+  padding: auto;
+  color: var(--gray-dark);
+}
+
+.form-inputs h2 span {
+  color: var(--green-brand);
+}
+
+.form-inputs [type="text"] {
+  width: 48%;
+  padding: 8px;
+  border: 1px solid var(--gray-off);
+  border-radius: 4px;
+}
+
+.form-inputs [type="text"]:focus {
+  outline-color: var(--green-brand);
+  background-color: white;
+}
+
+.form-inputs [type="mail"] {
+  width: 48%;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding: 8px;
+  border: 1px solid var(--gray-off);
+  border-radius: 4px;
+  outline-color: var(--green-brand);
+}
+
+.form-inputs [type="mail"]:focus {
+  outline-color: var(--green-brand);
+  background-color: white;
+}
+
+.form-inputs .mensagem [type="text"] {
+  width: 97%;
+  margin-top: 16px;
+  height: 100px;
+}
+
+.form-inputs .mensagem [type="text"]:focus {
+  outline-color: var(--green-brand);
+  background-color: white;
+}
+
+/*_______________________FOOTER_______________________*/
+
+footer {
+  background-color: var(--green-brand);
+  height: 120px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px;
+}
+
+footer .paragrafos-footer {
+  display: inline-block;
+  text-align: left;
+}
+
+footer .paragrafos-footer p strong {
+  font-weight: 700;
+}
+
+footer .imagem-footer {
+  text-align: right;
+  margin-right: 48px;
+  border-right: 2px solid white;
+  padding-right: 48px;
+}
+
+footer img {
+  width: 160px;
+}
+
+footer p {
+  color: white;
+  font-size: 1.3rem;
+}
+
+footer .icones-footer img {
+  width: 40px;
+  margin-left: 12px;
+}
+
+@media (max-width: 535px) {
+  #presentation h1 {
+    font-size: 3.2rem;
+  }
+
+  #presentation .cta {
+    font-size: 1.8rem;
+    background-color: var(--green-brand);
+    width: 140px;
+    height: 48px;
+    margin-top: 16px;
+  }
+
+  .features-title {
+    display: flex;
+    text-align: center;
+    width: 84%;
+  }
+
+  .features-title h1 {
+    font-size: 3.2rem;
+  }
+
+  .features-title p {
+    font-size: 1.6rem;
+  }
+
+  .features-title img {
+    display: none;
+  }
+
+  .primary-button {
+    font-size: 1.2rem;
+    background-color: var(--green-brand);
+    height: 42px;
+  }
+
+  .secondary-button {
+    font-size: 1.2rem;
+    color: var(--green-brand);
+    border: 1px solid var(--green-brand);
+    height: 42px;
+  }
+}
 /* 
 @media screen {
  
@@ -414,15 +571,46 @@ desktops, 992px
 */
 
 /*
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #000;
+  color: #eee;
+}
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container p {
+  font-size: 3rem;
+  padding: 0.5rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  overflow: hidden;
+}
 .container p span.typed-text {
   font-weight: normal;
-  color: #dd7732;
+  color: #ffa300;
 }
-
+.container p span.cursor {
+  display: inline-block;
+  background-color: #ccc;
+  margin-left: 0.1rem;
+  width: 3px;
+  animation: blink 1s infinite;
+}
 .container p span.cursor.typing {
   animation: none;
 }
-
 @keyframes blink {
   0%  { background-color: #ccc; }
   49% { background-color: #ccc; }
