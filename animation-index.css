@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap");
+
+:root {
+  --green-brand: #3c8533;
+  --green-brand-dark: #2f6a28;
+  --green-brand-dark-super: #183614;
+
+  --yellow-brand: #ffa300;
+  --yellow-brand-dark: #f18000;
+
+  --gray-dark: #333333;
+  --gray-off: #a3a3a3;
+
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  scroll-behavior: smooth;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+}
+
+/*_______________________BUTTONS_______________________*/
+
+button {
+  text-decoration: none;
+  font-weight: 900;
+  color: white;
+  border: none;
+  border-radius: 100px;
+  padding: 12px;
+  transition: 0.3 ease;
+  transition-property: background-color, color;
+  cursor: pointer;
+}
+
+#presentation .cta {
+  font-size: 1.8rem;
+  background-color: var(--green-brand);
+  width: 160px;
+  height: 48px;
+  margin-top: 24px;
+}
+
+#presentation .cta:hover {
+  font-size: 1.8rem;
+  background-color: var(--green-brand-dark);
+  border: none;
+  width: 160px;
+  height: 48px;
+  margin-top: 24px;
+}
+
+/*_______________________INDEX_______________________*/
+
+#presentation {
+  background-image: url(./assets/backgound-image-.jpg);
+  min-height: 100vh;
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  z-index: 1;
+}
+
+#presentation::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(----green-brand-dark-super);
+  opacity: 0.4;
+  z-index: -1;
+}
+
+#presentation img {
+  width: 56px;
+  margin-bottom: 16px;
+}
+
+/* animação */
+.container h1 {
+  font-size: 5.6rem;
+  font-weight: 700;
+  color: white;
+  width: fit-content;
+  overflow: hidden;
+  letter-spacing: 0.1rem;
+  margin: 16px;
+}
+
+.container h1 span.typed-text {
+  font-weight: 700;
+  color: var(--yellow-brand);
+  position: fixed;
+}
+
+.container h1 span.cursor.typing {
+  animation: none;
+}
+
+@keyframes blink {
+  0% {
+    background-color: #ccc;
+  }
+  49% {
+    background-color: #ccc;
+  }
+  50% {
+    background-color: transparent;
+  }
+  99% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: #ccc;
+  }
+}
+
+@media (max-width: 600px) {
+  .container h1 {
+    font-size: 4rem;
+    margin: 0;
+    padding: 0;
+    margin-top: 4px;
+  }
+
+  .container .cta {
+    font-size: 1.8rem;
+    background-color: var(--green-brand);
+    width: 140px;
+    height: 48px;
+    margin-top: 4px;
+  }
+
+  .container .cta:hover {
+    font-size: 1.8rem;
+    background-color: var(--green-brand-dark);
+    width: 140px;
+    height: 48px;
+    margin-top: 4px;
+  }
+}

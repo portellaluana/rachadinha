@@ -153,6 +153,10 @@ button {
   display: flex;
 }
 
+.features-title-icon img {
+  display: none;
+}
+
 .features-title img {
   float: left;
   margin-left: 12%;
@@ -436,6 +440,18 @@ button {
   background-color: white;
 }
 
+.form-inputs [type="number"] {
+  width: 48%;
+  padding: 8px;
+  border: 1px solid var(--gray-off);
+  border-radius: 4px;
+}
+
+.form-inputs [type="number"]:focus {
+  outline-color: var(--green-brand);
+  background-color: white;
+}
+
 .form-inputs [type="mail"] {
   width: 48%;
   margin-top: 8px;
@@ -504,41 +520,61 @@ footer .icones-footer img {
   margin-left: 12px;
 }
 
-@media (max-width: 535px) {
+@media (max-width: 600px) {
   #presentation h1 {
-    font-size: 3.2rem;
+    font-size: 4rem;
   }
 
   #presentation .cta {
     font-size: 1.8rem;
     background-color: var(--green-brand);
     width: 140px;
-    height: 48px;
+    height: 42px;
+    margin-top: 4px;
+  }
+
+  #presentation .cta:hover {
+    font-size: 1.8rem;
+    background-color: var(--green-brand-dark);
+    width: 140px;
+    height: 42px;
     margin-top: 16px;
   }
 
   .features-title {
-    display: flex;
-    text-align: center;
-    width: 84%;
+    min-height: 100vh;
   }
 
   .features-title h1 {
     font-size: 3.2rem;
+    max-width: 60%;
+    margin-left: 20%;
   }
 
   .features-title p {
     font-size: 1.6rem;
+    max-width: 60%;
+    margin-left: 20%;
+    margin-top: 16px;
+    margin-bottom: 16px;
   }
 
   .features-title img {
     display: none;
   }
 
-  .primary-button {
+  a .primary-button {
+    display: block;
     font-size: 1.2rem;
     background-color: var(--green-brand);
     height: 42px;
+    max-width: 100%;
+    margin-left: 33%;
+    border: 1px solid transparent;
+  }
+
+  a .primary-button:hover {
+    border: 1px solid transparent;
   }
 
   .secondary-button {
@@ -546,29 +582,132 @@ footer .icones-footer img {
     color: var(--green-brand);
     border: 1px solid var(--green-brand);
     height: 42px;
+    margin-left: 33%;
+    margin-top: 16px;
+  }
+
+  .secondary-button:hover {
+    font-size: 1.2rem;
+    color: white;
+    border: 1px solid var(--yellow-brand);
+    height: 42px;
+    margin-left: 33%;
+    margin-top: 16px;
+  }
+  .features-title-icon img {
+    display: flex;
+    max-width: 33%;
+    margin-left: 33%;
+    margin-bottom: 24px;
+  }
+
+  .features-highlights h1 {
+    font-size: 2.4rem;
+    max-width: 60%;
+    margin-left: 20%;
+  }
+
+  .features-presentation ul {
+    display: block;
+    max-width: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+  }
+
+  .features-presentation ul:hover {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .features-presentation ul li {
+    width: 100%;
+  }
+
+  .features-presentation ul li:hover {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .new-currency {
+    min-height: 100vh;
+  }
+
+  .new-currency h2 {
+    max-width: 60%;
+    margin-left: 33%;
+    margin-right: 33%;
+  }
+
+  .new-currency h3 {
+    margin-left: 33%;
+    margin-right: 20%;
+  }
+
+  .new-currency p {
+    font-size: 1.6rem;
+    max-width: 45%;
+    margin-left: 33%;
+    margin-right: 33%;
+    margin-bottom: 16px;
+  }
+
+  .new-currency .primary-button {
+    display: block;
+    font-size: 1.2rem;
+    background-color: var(--green-brand);
+    height: 42px;
+    max-width: 100%;
+    margin-left: 33%;
+  }
+
+  .new-currency .primary-button:hover {
+    background-color: var(--yellow-brand);
+    border: 1px solid transparent;
+  }
+
+  .form-itens {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+  }
+
+  .form-itens .form-header img {
+    display: none;
+  }
+
+  form div input,
+  .mensagem,
+  .form-inputs {
+    min-width: 320px;
+    width: 320px;
+    margin: auto;
+  }
+
+  .form-inputs [type="number"] {
+    margin-bottom: 8px;
+  }
+
+  footer {
+    display: flex;
+    padding: 16px;
+    height: 60px;
+    justify-content: center;
+  }
+
+  footer .imagem-footer {
+    display: none;
+  }
+
+  footer .paragrafos-footer {
+    display: none;
+  }
+
+  footer .icones-footer img {
+    margin: 4px;
+    width: 30px;
   }
 }
-/* 
-@media screen {
- 
-  
-phones, 600px
-@media only screen and (max-width: 600px) {
-  .example {background: red;}
-}
-
-tablets and large phones, 600px
-@media only screen and (min-width: 600px) {
-  .example {background: green;}
-}
-
-desktops, 992px 
-@media only screen and (min-width: 992px) {
-  .example {background: orange;}
-  
-}
-
-*/
 
 /*
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
