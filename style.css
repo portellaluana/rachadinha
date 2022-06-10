@@ -11,7 +11,7 @@
   --gray-dark: #333333;
   --gray-off: #a3a3a3;
 
-  font-size: 62.5%; /* 1rem = 10px */
+  font-size: 62.5%;
 }
 
 * {
@@ -135,12 +135,6 @@ button {
   color: white;
   position: relative;
   width: fit-content;
-}
-
-#presentation h1.text {
-  animation: typing 1s steps(80) 1s normal;
-  overflow: hidden;
-  color: var(--yellow-brand);
 }
 
 /*_______________________INNER_______________________*/
@@ -381,16 +375,11 @@ button {
   border: none;
 }
 
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
 /*_______________________FORMS_______________________*/
+
+form label {
+  display: none;
+}
 
 .form-itens {
   display: grid;
@@ -414,6 +403,7 @@ button {
   width: 400px;
   margin-left: 32px;
   text-align: center;
+  margin-top: 8px;
 }
 
 .form-inputs h2 {
@@ -424,46 +414,55 @@ button {
   color: var(--gray-dark);
 }
 
-.form-inputs h2 span {
-  color: var(--green-brand);
-}
-
 .form-inputs [type="text"] {
   width: 48%;
   padding: 8px;
-  border: 1px solid var(--gray-off);
-  border-radius: 4px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid var(--gray-off);
+  background-color: white;
+  margin-top: 16px;
 }
 
 .form-inputs [type="text"]:focus {
-  outline-color: var(--green-brand);
+  outline: none;
+  font-weight: 400;
+  border-bottom: 1px solid var(--yellow-brand);
   background-color: white;
 }
 
 .form-inputs [type="number"] {
   width: 48%;
   padding: 8px;
-  border: 1px solid var(--gray-off);
-  border-radius: 4px;
+  background-color: white;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid var(--gray-off);
 }
 
 .form-inputs [type="number"]:focus {
-  outline-color: var(--green-brand);
+  outline: none;
+  border-bottom: 1px solid var(--yellow-brand);
   background-color: white;
 }
 
 .form-inputs [type="mail"] {
   width: 48%;
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-top: 16px;
+  margin-bottom: 16px;
   padding: 8px;
-  border: 1px solid var(--gray-off);
-  border-radius: 4px;
-  outline-color: var(--green-brand);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid var(--gray-off);
+  background-color: white;
 }
 
 .form-inputs [type="mail"]:focus {
-  outline-color: var(--green-brand);
+  outline: none;
+  border-bottom: 1px solid var(--yellow-brand);
   background-color: white;
 }
 
@@ -471,10 +470,16 @@ button {
   width: 97%;
   margin-top: 16px;
   height: 100px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid var(--gray-off);
+  background-color: white;
 }
 
 .form-inputs .mensagem [type="text"]:focus {
-  outline-color: var(--green-brand);
+  outline: none;
+  border-bottom: 1px solid var(--yellow-brand);
   background-color: white;
 }
 
@@ -520,7 +525,7 @@ footer .icones-footer img {
   margin-left: 12px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   #presentation h1 {
     font-size: 4rem;
   }
